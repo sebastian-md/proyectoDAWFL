@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodawfa.UsuarioPedidoController">
+   <children>
+      <BorderPane prefHeight="403.0" prefWidth="600.0">
+         <bottom>
+            <TableView fx:id="idTabla" prefHeight="200.0" prefWidth="456.0" style="-fx-background-color: F8FCBB;" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="idIdPedido" prefWidth="75.0" style="-fx-background-color: F5FAA4;" text="ID Pedido" />
+                <TableColumn fx:id="idNombrePedido" prefWidth="75.0" style="-fx-background-color: F5FAA4;" text="Nombre Pedido" />
+                  <TableColumn fx:id="idEstado" prefWidth="75.0" style="-fx-background-color: F5FAA4;" text="Estado" />
+                  <TableColumn fx:id="idUsuario" prefWidth="75.0" style="-fx-background-color: F5FAA4;" text="Usuario" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <BorderPane.margin>
+                  <Insets bottom="25.0" left="50.0" right="50.0" />
+               </BorderPane.margin>
+            </TableView>
+         </bottom>
+         <center>
+            <GridPane prefHeight="186.0" prefWidth="495.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="121.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="129.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Usuarios:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="cmbUsuarios" onAction="#cambio" prefHeight="26.0" prefWidth="140.0" promptText="   - seleccionar -" style="-fx-background-color: lightblue;" GridPane.columnIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="175.0" right="175.0" top="30.0" />
+               </padding>
+            </GridPane>
+         </center>
+         <top>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/compra1.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="CENTER" text="Usuarios y Pedidos">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top></BorderPane>
+   </children>
+</AnchorPane>

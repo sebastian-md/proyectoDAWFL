@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodawfa.NuevaOfertaController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/mas.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Nueva Oferta">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#enviarDatosOferta" style="-fx-background-color: lightblue;" text="Enviar datos">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#insertarNuevaOferta" style="-fx-background-color: lightblue;" text="Insertar">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+         </bottom>
+         <left>
+            <HBox prefHeight="200.0" prefWidth="155.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <HBox prefHeight="200.0" prefWidth="157.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <GridPane prefHeight="200.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nombre de Oferta:" />
+                  <Label text="Fecha Inicio:" GridPane.rowIndex="1" />
+                  <Label text="Fecha Final" GridPane.rowIndex="2" />
+                  <TextField fx:id="idTxtNombreOferta" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <DatePicker fx:id="idFechaInicio" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <DatePicker fx:id="idFechaFinal" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" top="40.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
